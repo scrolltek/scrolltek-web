@@ -1,4 +1,4 @@
-# 
+# Scrolltek
 
 A simple web application to assist with learning to read words from the Hebrew
 Bible
