@@ -28,6 +28,10 @@
       "provider": "cdnjs",
       "library": "jquery-validation-unobtrusive@3.2.11",
       "destination": "wwwroot/lib/jquery-validation-unobtrusive/"
+    },
+    {
+      "library": "page.js@1.11.4",
+      "destination": "wwwroot/lib/page.js/"
     }
   ]
 }
