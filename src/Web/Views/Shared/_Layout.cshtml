@@ -32,41 +32,84 @@
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block" />
       <!-- Heading -->
-      <div class="sidebar-heading">
+      <div id="tenakh" class="sidebar-heading">
         TeNaKh
       </div>
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
           <i class="fas fa-fw fa-balance-scale"></i>
-          <span>Torah</span>
+          <span>Torah (Teaching)</span>
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Login Screens:</h6>
-            <a class="collapse-item" href="login.html">Login</a>
-            <a class="collapse-item" href="register.html">Register</a>
-            <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-            <div class="collapse-divider"></div>
-            <h6 class="collapse-header">Other Pages:</h6>
-            <a class="collapse-item" href="404.html">404 Page</a>
-            <a class="collapse-item" href="blank.html">Blank Page</a>
+            <a class="collapse-item" href="#">Bereshit (In the Beginning)</a>
+            <a class="collapse-item" href="#">Shemot (The names)</a>
+            <a class="collapse-item" href="#">Vayikra (And He called)</a>
+            <a class="collapse-item" href="#">Bemidbar (In the desert)</a>
+            <a class="collapse-item" href="#">Devarim (Words)</a>
           </div>
         </div>
       </li>
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#prophets" aria-expanded="false" aria-controls="prophets">
           <i class="fas fa-fw fa-torah"></i>
-          <span>Prophets</span>
+          <span>Nevi'im (Prophets)</span>
         </a>
+        <div id="prophets" class="collapse" aria-labelledby="prophets" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Rishonim (Former):</h6>
+            <a class="collapse-item" href="#">Yĕhôshúa‘ (Joshua)</a>
+            <a class="collapse-item" href="#">Shophtim (Judges)</a>
+            <a class="collapse-item" href="#">Shmû’ēl (Samuel)</a>
+            <a class="collapse-item" href="#">M'lakhim (Kings)</a>
+            <div class="collapse-divider"></div>
+            <h6 class="collapse-header">Aharonim (Latter):</h6>
+            <a class="collapse-item" href="#">Yĕsha‘ăyāhû (Isaiah)</a>
+            <a class="collapse-item" href="#">Yirmyāhû (Jeremiah)</a>
+            <a class="collapse-item" href="#">Yĕkhezqiēl (Ezekiel)</a>
+            <h6 class="collapse-header">Trei Asar (The Twelve):</h6>
+            <a class="collapse-item" href="#">Hôshēa‘ (Hosea)</a>
+            <a class="collapse-item" href="#">Yô’ēl (Joel)</a>
+            <a class="collapse-item" href="#">‘Āmôs (Amos)</a>
+            <a class="collapse-item" href="#">‘Ōvadhyāh (Obadiah)</a>
+            <a class="collapse-item" href="#">Yônāh (Jonah)</a>
+            <a class="collapse-item" href="#">Mîkhāh (Micah)</a>
+            <a class="collapse-item" href="#">Nakḥûm (Nahum)</a>
+            <a class="collapse-item" href="#">Khăvhakûk (Habakkuk)</a>
+            <a class="collapse-item" href="#">Tsĕphanyāh (Zephaniah)</a>
+            <a class="collapse-item" href="#">Khaggai (Haggai)</a>
+            <a class="collapse-item" href="#">Zkharyāh (Zechariah)</a>
+            <a class="collapse-item" href="#">Mal’ākhî (Malachi)</a>
+          </div>
+        </div>
       </li>
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link collapsed" href="#" " data-toggle="collapse" data-target="#writings" aria-expanded="false" aria-controls="writings">
           <i class="fas fa-fw fa-book-open"></i>
-          <span>Writings</span>
+          <span>Ketuvim (Writings)</span>
         </a>
+        <div id="writings" class="collapse" aria-labelledby="writings" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Sifrei Emet (Poetry):</h6>
+            <a class="collapse-item" href="#">Tehillim (Psalms)</a>
+            <a class="collapse-item" href="#">Mishlei (Proverbs)</a>
+            <a class="collapse-item" href="#">Iyyôbh (Job)</a>
+            <div class="collapse-divider"></div>
+            <h6 class="collapse-header">Hamesh Megillot (Five Scrolls):</h6>
+            <a class="collapse-item" href="#">Shīr Hashīrīm (Song of Songs)</a>
+            <a class="collapse-item" href="#">Rūth (Ruth)</a>
+            <a class="collapse-item" href="#">Eikhah (Lamentations)</a>
+            <a class="collapse-item" href="#">Qōheleth (Ecclesiastes)</a>
+            <a class="collapse-item" href="#">Estēr (Esther)</a>
+            <h6 class="collapse-header">Other:</h6>
+            <a class="collapse-item" href="#">Dānî'ēl (Daniel)</a>
+            <a class="collapse-item" href="#">Ezrā (Ezra and Nehemiah)</a>
+            <a class="collapse-item" href="#">Divrei ha-Yamim (Chronicles)</a>
+          </div>
+        </div>
       </li>
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
@@ -77,7 +120,7 @@
       <!-- Nav Item - Pages Collapse Menu -->
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" asp-controller="Home" asp-action="Attributions">
+        <a class="nav-link" href="/Home/Attributions">
           <i class="fas fa-fw fa-code"></i>
           <span>Attributions</span>
         </a>
