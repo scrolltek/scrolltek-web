@@ -15,6 +15,11 @@ namespace Web.Controllers
             return View();
         }
 
+        public IActionResult Attributions()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
