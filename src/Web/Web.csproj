@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Views\Shared\_Template.cshtml" />
+    <Content Remove="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Views\Shared\_Template.cshtml" />
+    <None Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
 
 
