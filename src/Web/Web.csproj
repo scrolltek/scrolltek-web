@@ -4,6 +4,20 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <UserSecretsId>aspnet-Web-27FD79BB-C3C8-49DA-9602-C7138480B667</UserSecretsId>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <RootNamespace>Scrolltek.Web</RootNamespace>
+    <PackageId>Scrolltek.Web</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Mike Atkisson</Authors>
+    <Company>Scrolltek.org</Company>
+    <Product>Scrolltek.org</Product>
+    <Description>The scrolltek.org website.</Description>
+    <Copyright>MIT Open Source</Copyright>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <PackageProjectUrl>https://scrolltek.org</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/scrolltek/scrolltek-web</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>scrolltek</PackageTags>
+    <PackageIconUrl>https://raw.githubusercontent.com/scrolltek/scrolltek-web/develop/art/favicon.ico</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,6 +32,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
     <PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="2.0.48" />
   </ItemGroup>
 
