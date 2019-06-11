@@ -9,7 +9,7 @@ namespace Scrolltek.Web.Models
     /// <summary>
     /// Models a verse in the Hebrew Bible.
     /// </summary>
-    public class Verse
+    public class Verse : Artifact
     {
         /// <summary>
         /// Gets or sets a list all words (in order of reading) found in the

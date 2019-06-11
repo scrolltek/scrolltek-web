@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 namespace Scrolltek.Web.Models
 {
     /// <summary>
-    /// Models a book in the Hebrew Bible.
+    /// Models an arbitrary item in the Hebrew Bible.
     /// </summary>
-    public class Book : Artifact
+    public class Artifact
     {
         /// <summary>
-        /// Gets or sets a list of chapters (in order of reading) found in the
-        /// book.
+        /// Gets or sets the ordinal for the artifact.
         /// </summary>
-        public IList<Chapter> Chapters { get; set; }
+        public int OrderNumber { get; set; }
     }
 }

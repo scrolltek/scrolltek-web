@@ -8,9 +8,8 @@ namespace Scrolltek.Web.Models
     /// <summary>
     /// Models a word found in the Hebrew Bible.
     /// </summary>
-    public class Word
+    public class Word : Artifact
     {
-
         /// <summary>
         /// Gets or sets The unique ID for the word.
         /// </summary>

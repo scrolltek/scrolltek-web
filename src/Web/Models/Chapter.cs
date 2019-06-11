@@ -8,7 +8,7 @@ namespace Scrolltek.Web.Models
     /// <summary>
     /// Models a chapter of in the Hebrew Bible
     /// </summary>
-    public class Chapter
+    public class Chapter : Artifact
     {
         /// <summary>
         /// Gets or sets a list (in order of reading) of verses found in the
