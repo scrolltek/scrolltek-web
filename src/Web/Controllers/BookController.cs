@@ -91,6 +91,18 @@ namespace Web.Controllers
             }
         }
 
+        [HttpGet("{chapterNumber}")]
+        public IActionResult GetChapter(int chapterNumber)
+        {
+            IActionResult result = NotFound();
+            var chapter = GetChapterFromXml(chapterNumber);
+            if (chapter != null)
+            {
+                result = Ok(chapter);
+            }
+            return result;
+        }
+
         [HttpGet("{chapterNumber}/{verseNumber}")]
         public IActionResult GetVerse(int chapterNumber, int verseNumber)
         {
@@ -101,6 +113,25 @@ namespace Web.Controllers
                 result = Ok(verse);
             }
             return result;
+        }
+
+        private Chapter GetChapterFromXml(int chapterNumber)
+        {
+            Chapter chapter = null;
+            var xpath = $"//chapter[@osisID='{BookName}.{chapterNumber}']";
+            var node = BookXml.SelectSingleNode(xpath);
+            if (node != null)
+            {
+                chapter = new Chapter();
+                chapter.OrderNumber = chapterNumber;
+                chapter.Verses = new List<Verse>();
+                for (int i = 1; i <= node.ChildNodes.Count; i++)
+                {
+                    var verse = GetVerseFromXml(chapterNumber, i);
+                    chapter.Verses.Add(verse);
+                }
+            }
+            return chapter;
         }
 
         private Verse GetVerseFromXml(int chapterNumber, int verseNumber)

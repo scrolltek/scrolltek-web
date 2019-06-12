@@ -20,7 +20,12 @@ namespace Scrolltek.Web.Models
         {
             get
             {
-                return "Unset";
+                var text = String.Empty;
+                foreach (var verse in Verses)
+                {
+                    text += verse.Text + " ";
+                }
+                return text.Trim();
             }
         }
     }
