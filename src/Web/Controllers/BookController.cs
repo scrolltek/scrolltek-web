@@ -144,55 +144,41 @@ namespace Web.Controllers
                 verse = new Verse();
                 verse.OrderNumber = verseNumber;
                 verse.Words = GetWordsFromVerseNode(node);
-                verse.Segments = GetSegmentsFromVerseNode(node);
             }
             return verse;
         }
 
-        private List<Word> GetWordsFromVerseNode(XmlNode node)
+        private List<Artifact> GetWordsFromVerseNode(XmlNode node)
         {
-            var words = new List<Word>();
-            var nodes = node.SelectNodes("./w");
-            if (nodes != null)
+            var words = new List<Artifact>();
+            for (int i = 0; i < node.ChildNodes.Count; i++)
             {
-                var order = 1;
-                foreach (XmlNode element in nodes)
+                var element = node.ChildNodes[i]; 
+                if (element.Name == "w")
                 {
                     var word = new Word
                     {
                         Id = element.Attributes["id"].Value,
-                        OrderNumber = order,
+                        OrderNumber = i + 1,
                         Lemma = element.Attributes["lemma"].Value,
                         Morphology = element.Attributes["morph"].Value,
                     };
                     word.SetText(element.InnerText);
                     words.Add(word);
-                    order += 1;
                 }
-            }
-            return words;
-        }
-
-        private List<Segment> GetSegmentsFromVerseNode(XmlNode node)
-        {
-            var segments = new List<Segment>();
-            var nodes = node.SelectNodes("./seg");
-            if (nodes != null)
-            {
-                var order = 1;
-                foreach (XmlNode element in nodes)
+                else if (element.Name == "seg")
                 {
                     var segment = new Segment
                     {
-                        OrderNumber = order,
+                        OrderNumber = i + 1,
                         Type = element.Attributes["type"].Value
                     };
                     segment.SetText(element.InnerText);
-                    segments.Add(segment);
-                    order += 1;
+                    words.Add(segment);
                 }
+                
             }
-            return segments;
+            return words;
         }
 
     }

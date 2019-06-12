@@ -15,26 +15,25 @@ namespace Scrolltek.Web.Models
         /// Gets or sets a list all words (in order of reading) found in the
         /// verse.
         /// </summary>
-        public IList<Word> Words { get; set; }
-
-        /// <summary>
-        /// Gets or sets all ending segments (in order of reading) found in the
-        /// verse.
-        /// </summary>
-        public IList<Segment> Segments { get; set; }
+        public IList<Artifact> Words { get; set; }
 
         public override string Text
         {
             get
             {
                 var text = String.Empty;
-                foreach (var word in Words)
+                for (int i = 0; i < Words.Count; i++)
                 {
-                    text += ' ' + word.Text;
-                }
-                foreach (var segment in Segments)
-                {
-                    text += segment.Text;
+                    var word = Words[i];
+                    var wasPreviousSegment = (i - 1 >= 0) && (Words[i - 1] is Segment);
+                    if (wasPreviousSegment || word is Segment)
+                    {
+                        text += word.Text;
+                    }
+                    else
+                    {
+                        text += ' ' + word.Text;
+                    }
                 }
                 return text.Replace("/", "").Trim();
             }
