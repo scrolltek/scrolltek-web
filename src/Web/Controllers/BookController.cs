@@ -91,6 +91,24 @@ namespace Web.Controllers
             }
         }
 
+        [HttpGet]
+        public Book GetBook()
+        {
+            var book = new Book();
+            book.Chapters = new List<Chapter>();
+            var xpath = $"//chapter";
+            var nodes = BookXml.SelectNodes(xpath);
+            if (nodes != null)
+            {
+                for (int i = 1; i <= nodes.Count; i++)
+                {
+                    var chapter = GetChapterFromXml(i);
+                    book.Chapters.Add(chapter);
+                }
+            }
+            return book;
+        }
+
         [HttpGet("{chapterNumber}")]
         public IActionResult GetChapter(int chapterNumber)
         {

@@ -20,7 +20,12 @@ namespace Scrolltek.Web.Models
         {
             get
             {
-                return "Unset";
+                var text = String.Empty;
+                foreach (var chapter in Chapters)
+                {
+                    text += chapter.Text + Environment.NewLine + Environment.NewLine;
+                }
+                return text;
             }
         }
     }
