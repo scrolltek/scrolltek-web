@@ -106,14 +106,15 @@ namespace Web.Controllers
                     var order = 1;
                     foreach (XmlNode element in nodes)
                     {
-                        words.Add(new Word
+                        var word = new Word
                         {
                             Id = element.Attributes["id"].Value,
                             OrderNumber = order,
                             Lemma = element.Attributes["lemma"].Value,
                             Morphology = element.Attributes["morph"].Value,
-                            Text = element.InnerText
-                        });
+                        };
+                        word.SetText(element.InnerText);
+                        words.Add(word);
                         order += 1;
                     }
                     result = Ok(new Verse

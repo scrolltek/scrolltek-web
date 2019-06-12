@@ -10,6 +10,8 @@ namespace Scrolltek.Web.Models
     /// </summary>
     public class Word : Artifact
     {
+        private string _text;
+
         /// <summary>
         /// Gets or sets The unique ID for the word.
         /// </summary>
@@ -28,6 +30,21 @@ namespace Scrolltek.Web.Models
         /// <summary>
         /// Gets or sets the actual text of the word.
         /// </summary>
-        public string Text { get; set; }
+        public override string Text
+        {
+            get
+            {
+                return _text;
+            }
+        }
+
+        /// <summary>
+        /// Sets the text of the word.
+        /// </summary>
+        /// <param name="text">The nullable text to set.</param>
+        public void SetText(string text)
+        {
+            _text = text;
+        }
     }
 }

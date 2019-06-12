@@ -15,5 +15,13 @@ namespace Scrolltek.Web.Models
         /// book.
         /// </summary>
         public IList<Chapter> Chapters { get; set; }
+
+        public override string Text
+        {
+            get
+            {
+                return "Unset";
+            }
+        }
     }
 }

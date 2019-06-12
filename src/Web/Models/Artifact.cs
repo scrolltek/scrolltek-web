@@ -8,11 +8,16 @@ namespace Scrolltek.Web.Models
     /// <summary>
     /// Models an arbitrary item in the Hebrew Bible.
     /// </summary>
-    public class Artifact
+    public abstract class Artifact
     {
         /// <summary>
         /// Gets or sets the ordinal for the artifact.
         /// </summary>
         public int OrderNumber { get; set; }
+
+        /// <summary>
+        /// Gets or sets the actual text of the artifact.
+        /// </summary>
+        public abstract string Text { get; }
     }
 }

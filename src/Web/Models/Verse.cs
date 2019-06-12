@@ -16,5 +16,13 @@ namespace Scrolltek.Web.Models
         /// verse.
         /// </summary>
         public IList<Word> Words { get; set; }
+
+        public override string Text
+        {
+            get
+            {
+                return "Unset";
+            }
+        }
     }
 }
