@@ -1,8 +1,11 @@
-﻿@{
+@using Scrolltek.Web.Models
+@model Verse
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+  <h1 class="display-4">@Model.Text</h1>
+  <h2 class="display-5">(I, I am the Lord, and besides Me there is no Savior.)</h2>
+  <p>Yĕsha‘ăyāhû (Isaiah) 43:11</p>
 </div>

@@ -12,7 +12,9 @@ namespace Web.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var ctrl = new IsaiahController();
+            var verse = ctrl.GetVerseFromXml(43, 11);
+            return View(verse);
         }
 
         public IActionResult Attributions()
