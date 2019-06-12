@@ -1,7 +1,32 @@
-#tenakh {
-  margin-top: 15px;
+.main-setting {
+  border-width: 3px !important;
+  margin: 7px;
+  padding-bottom: 12px;
 }
-
+  .main-setting .sidebar-heading {
+    padding: 0;
+    position: absolute;
+    left: 5px;
+    color: #aaa !important;
+  }
+  .main-setting a {
+    color: #aaa !important;
+  }
+  .main-setting .active {
+    color: #fefefe !important;
+  }
+.text-icon {
+  font-family: serif;
+  font-size: 72px !important;
+  font-style: normal !important;
+  margin-top: -35px;
+  margin-left: -20px;
+}
+.on-off {
+  position: absolute;
+  bottom: 3px;
+  left: 5px;
+}
 .card-header img {
   height: 32px;
   height: 32px;

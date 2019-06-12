@@ -23,12 +23,130 @@
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion toggled" id="accordionSidebar">
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" asp-controller="Home" asp-action="Index" style="background-color: #fff; border-right: 1px solid #efefef; color: #888">
-        <div class="sidebar-brand-icon rotate-n-15">
-          <img src="~/img/scrolltek-logo-32.png" />
+      <li>
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" asp-controller="Home" asp-action="Index" style="background-color: #fff; border-right: 1px solid #efefef; color: #888">
+          <div class="sidebar-brand-icon rotate-n-15">
+            <img src="~/img/scrolltek-logo-32.png" />
+          </div>
+          <div class="sidebar-brand-text mx-3">Scrolltek<span style="top: 42px;font-weight: normal;font-size:11px;position: absolute;left: 138px;">v0.1.0</span></div>
+        </a>
+      </li>
+      <li class="main-setting nav-item border border-light rounded bg-gray-900">
+        <span class="sidebar-heading active">Niqqud (On)</span>
+        <a class="nav-link active" href="#">
+          <div class="text-icon">אֱ</div>
+        </a>
+        <div class="on-off btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary btn-sm active">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked> On
+          </label>
+          <label class="btn btn-secondary btn-sm">
+            <input type="radio" name="options" id="option3" autocomplete="off"> Off
+          </label>
         </div>
-        <div class="sidebar-brand-text mx-3">Scrolltek<span style="top: 42px;font-weight: normal;font-size:11px;position: absolute;left: 138px;">v0.1.0</span></div>
-      </a>
+      </li>
+      <!-- Just an example of which classes to toggle to turn the control off.  This should be removed.-->
+      <li class="main-setting nav-item border border-secondary rounded bg-gray-900">
+        <span class="sidebar-heading">Niqqud (Off)</span>
+        <a class="nav-link" href="#">
+          <div class="text-icon">אֱ</div>
+        </a>
+        <div class="on-off btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary btn-sm">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked> On
+          </label>
+          <label class="btn btn-secondary btn-sm active">
+            <input type="radio" name="options" id="option3" autocomplete="off"> Off
+          </label>
+        </div>
+      </li>
+      <li class="main-setting nav-item border border-light rounded bg-gray-900">
+        <span class="sidebar-heading active">Lexical (On)</span>
+        <a class="nav-link active" href="#">
+          <div class="text-icon">אֱ</div>
+        </a>
+        <div class="on-off btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary btn-sm active">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked> On
+          </label>
+          <label class="btn btn-secondary btn-sm">
+            <input type="radio" name="options" id="option3" autocomplete="off"> Off
+          </label>
+        </div>
+      </li>
+      <!-- Just an example of which classes to toggle to turn the control off.  This should be removed.-->
+      <li class="main-setting nav-item border border-secondary rounded bg-gray-900">
+        <span class="sidebar-heading">Lexical (Off)</span>
+        <a class="nav-link" href="#">
+          <div class="text-icon">אֱ</div>
+        </a>
+        <div class="on-off btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary btn-sm">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked> On
+          </label>
+          <label class="btn btn-secondary btn-sm active">
+            <input type="radio" name="options" id="option3" autocomplete="off"> Off
+          </label>
+        </div>
+      </li>
+      <li class="main-setting nav-item border border-light rounded bg-gray-900">
+        <span class="sidebar-heading active">English (On)</span>
+        <a class="nav-link active" href="#">
+          <div class="text-icon">אֱ</div>
+        </a>
+        <div class="on-off btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary btn-sm active">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked> On
+          </label>
+          <label class="btn btn-secondary btn-sm">
+            <input type="radio" name="options" id="option3" autocomplete="off"> Off
+          </label>
+        </div>
+      </li>
+      <!-- Just an example of which classes to toggle to turn the control off.  This should be removed.-->
+      <li class="main-setting nav-item border border-secondary rounded bg-gray-900">
+        <span class="sidebar-heading">English (Off)</span>
+        <a class="nav-link" href="#">
+          <div class="text-icon">אֱ</div>
+        </a>
+        <div class="on-off btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary btn-sm">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked> On
+          </label>
+          <label class="btn btn-secondary btn-sm active">
+            <input type="radio" name="options" id="option3" autocomplete="off"> Off
+          </label>
+        </div>
+      </li>
+      <li class="main-setting nav-item border border-light rounded bg-gray-900">
+        <span class="sidebar-heading active">Commentary</span>
+        <a class="nav-link active" href="#">
+          <div class="text-icon">אֱ</div>
+        </a>
+        <div class="on-off btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary btn-sm active">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked> On
+          </label>
+          <label class="btn btn-secondary btn-sm">
+            <input type="radio" name="options" id="option3" autocomplete="off"> Off
+          </label>
+        </div>
+      </li>
+      <!-- Just an example of which classes to toggle to turn the control off.  This should be removed.-->
+      <li class="main-setting nav-item border border-secondary rounded bg-gray-900">
+        <span class="sidebar-heading">Commentary</span>
+        <a class="nav-link" href="#">
+          <div class="text-icon">אֱ</div>
+        </a>
+        <div class="on-off btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary btn-sm">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked> On
+          </label>
+          <label class="btn btn-secondary btn-sm active">
+            <input type="radio" name="options" id="option3" autocomplete="off"> Off
+          </label>
+        </div>
+      </li>
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block" />
       <!-- Heading -->
