@@ -134,7 +134,7 @@ namespace Web.Controllers
             return result;
         }
 
-        private Chapter GetChapterFromXml(int chapterNumber)
+        internal Chapter GetChapterFromXml(int chapterNumber)
         {
             Chapter chapter = null;
             var xpath = $"//chapter[@osisID='{BookName}.{chapterNumber}']";
@@ -153,7 +153,7 @@ namespace Web.Controllers
             return chapter;
         }
 
-        private Verse GetVerseFromXml(int chapterNumber, int verseNumber)
+        internal Verse GetVerseFromXml(int chapterNumber, int verseNumber)
         {
             Verse verse = null;
             var xpath = $"//verse[@osisID='{BookName}.{chapterNumber}.{verseNumber}']";
@@ -167,7 +167,7 @@ namespace Web.Controllers
             return verse;
         }
 
-        private List<Artifact> GetWordsFromVerseNode(XmlNode node)
+        internal List<Artifact> GetWordsFromVerseNode(XmlNode node)
         {
             var words = new List<Artifact>();
             for (int i = 0; i < node.ChildNodes.Count; i++)
