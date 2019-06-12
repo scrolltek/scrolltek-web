@@ -13,6 +13,7 @@ namespace Web.Controllers
     /// <summary>
     /// Fetches information from and about the Miqra.
     /// </summary>
+    [Route("api/books/[controller]")]
     [ApiController]
     public abstract class BookController : ControllerBase
     {
