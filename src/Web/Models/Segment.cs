@@ -22,7 +22,13 @@ namespace Scrolltek.Web.Models
         /// <summary>
         /// Gets the actual text of the segment.
         /// </summary>
-        public override string Text { get; }
+        public override string Text
+        {
+            get
+            {
+                return _text;
+            }
+        }
 
         /// <summary>
         /// Gets the raw text of the segment.

@@ -91,14 +91,18 @@ namespace Web.Controllers
             }
         }
 
-        [HttpGet("{chapter}/{verse}")]
-        public IActionResult GetVerse(int chapter, int verse)
+        [HttpGet("{chapterNumber}/{verseNumber}")]
+        public IActionResult GetVerse(int chapterNumber, int verseNumber)
         {
             IActionResult result = NotFound();
-            var xpath = $"//verse[@osisID='{BookName}.{chapter}.{verse}']";
+            var xpath = $"//verse[@osisID='{BookName}.{chapterNumber}.{verseNumber}']";
             var node = BookXml.SelectSingleNode(xpath);
             if (node != null)
             {
+                var verse = new Verse();
+                verse.OrderNumber = verseNumber;
+
+                // Add the words to the verse.
                 var nodes = node.SelectNodes("./w");
                 if (nodes != null)
                 {
@@ -117,12 +121,30 @@ namespace Web.Controllers
                         words.Add(word);
                         order += 1;
                     }
-                    result = Ok(new Verse
-                    {
-                        OrderNumber = verse,
-                        Words = words
-                    });
+                    verse.Words = words;
                 }
+
+                // Add the ending segments to the verse.
+                nodes = node.SelectNodes("./seg");
+                if (nodes != null)
+                {
+                    var segments = new List<Segment>();
+                    var order = 1;
+                    foreach (XmlNode element in nodes)
+                    {
+                        var segment = new Segment
+                        {
+                            OrderNumber = order,
+                            Type = element.Attributes["type"].Value
+                        };
+                        segment.SetText(element.InnerText);
+                        segments.Add(segment);
+                        order += 1;
+                    }
+                    verse.Segments = segments;
+                }
+
+                result = Ok(verse);
             }
             return result;
         }

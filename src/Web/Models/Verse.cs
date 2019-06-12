@@ -17,11 +17,26 @@ namespace Scrolltek.Web.Models
         /// </summary>
         public IList<Word> Words { get; set; }
 
+        /// <summary>
+        /// Gets or sets all ending segments (in order of reading) found in the
+        /// verse.
+        /// </summary>
+        public IList<Segment> Segments { get; set; }
+
         public override string Text
         {
             get
             {
-                return "Unset";
+                var text = String.Empty;
+                foreach (var word in Words)
+                {
+                    text += ' ' + word.Text;
+                }
+                foreach (var segment in Segments)
+                {
+                    text += segment.Text;
+                }
+                return text.Replace("/", "").Trim();
             }
         }
     }
