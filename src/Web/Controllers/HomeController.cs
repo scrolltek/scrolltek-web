@@ -13,7 +13,7 @@ namespace Web.Controllers
         public IActionResult Index()
         {
             var ctrl = new BereshitController();
-            var verse = ctrl.GetChapterFromXml(1);
+            var verse = ctrl.GetChapterFromData(1);
             return View(verse);
         }
 

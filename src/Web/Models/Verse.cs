@@ -38,5 +38,11 @@ namespace Scrolltek.Web.Models
                 return text.Replace("/", "").Trim();
             }
         }
+
+        /// <summary>
+        /// Gets or sets an English translation of the Hebrew text using "The
+        /// Koren Jerusalem Bible" (license CC-BY-NC).
+        /// </summary>
+        public string Koren { get; set; }
     }
 }
