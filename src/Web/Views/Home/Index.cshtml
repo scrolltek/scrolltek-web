@@ -5,13 +5,20 @@
 }
 
 <div class="align-self-center">
-  <ul style="font-size: 1.75rem; padding-right: 50px; list-style-type: none" class="text-right">
+  <ul style="font-size: 1.75rem; list-style-type: none; margin: 0; padding: 0">
     @foreach (var verse in Model.Verses)
     {
-      <li style="direction: rtl; margin-bottom: 20px" class="container">
+      <li style="direction: rtl" class="container text-right">
         <div class="row">
           <div class="col-1">@verse.HebrewOrdinal</div>
-          <div class="col-11 font-weight-bold">@verse.Text</div>
+          <div class="col-11 font-weight-bold">
+            @verse.Text
+          </div>
+        </div>
+      </li>
+      <li class="container text-left" style="margin-bottom: 30px">
+        <div class="row">
+          <div class="col-12"><span style="font-size: 1rem">@verse.OrderNumber.)</span>&nbsp;In the beginning</div>
         </div>
       </li>
     }
