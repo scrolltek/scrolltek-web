@@ -1,3 +1,11 @@
+.topbar {
+  height: 3.375rem !important;
+}
+
+.sidebar .sidebar-brand {
+  height: 3.375rem !important;
+}
+
 .main-setting {
   border-width: 3px !important;
   margin: 7px;

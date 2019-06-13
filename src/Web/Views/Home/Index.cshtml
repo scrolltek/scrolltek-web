@@ -1,11 +1,19 @@
 @using Scrolltek.Web.Models
-@model Verse
+@model Chapter
 @{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-  <h1 class="display-4">@Model.Text</h1>
-  <h2 class="display-5">(I, I am the Lord, and besides Me there is no Savior.)</h2>
-  <p>Yĕsha‘ăyāhû (Isaiah) 43:11</p>
+<div class="align-self-center">
+  <ul style="font-size: 1.75rem; padding-right: 50px; list-style-type: none" class="text-right">
+    @foreach (var verse in Model.Verses)
+    {
+      <li style="direction: rtl; margin-bottom: 20px" class="container">
+        <div class="row">
+          <div class="col-1">@verse.OrderNumber</div>
+          <div class="col-11 font-weight-bold">@verse.Text</div>
+        </div>
+      </li>
+    }
+  </ul>
 </div>

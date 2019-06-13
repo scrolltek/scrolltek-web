@@ -12,8 +12,8 @@ namespace Web.Controllers
     {
         public IActionResult Index()
         {
-            var ctrl = new IsaiahController();
-            var verse = ctrl.GetVerseFromXml(43, 11);
+            var ctrl = new BereshitController();
+            var verse = ctrl.GetChapterFromXml(1);
             return View(verse);
         }
 
