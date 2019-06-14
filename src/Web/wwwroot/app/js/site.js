@@ -60,4 +60,22 @@
     e.preventDefault();
   });
 
+  $('#searchDropdown').on('click', function (e) {
+    if ($(window).width() < 768) {
+      $('#searchInput').focus(); // if the #searchDropdown is clicked
+    }
+  });
+
+  $('#searchInput').on('focus', function (e) {
+    if ($(window).width() < 768) {
+      $('#sidebarToggleTop, #loginItem').hide();
+    }
+  });
+
+  $('#searchInput').on('blur', function (e) {
+    if ($(window).width() < 768) {
+      $('#sidebarToggleTop, #loginItem').show();
+    }
+  });
+
 })(jQuery); // End of use strict

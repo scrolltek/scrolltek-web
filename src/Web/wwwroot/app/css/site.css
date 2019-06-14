@@ -14,6 +14,14 @@
   height: 3.375rem !important;
 }
 
+#sidebarToggleTop {
+  cursor: pointer;
+}
+
+.navbar .btn-link, .navbar .nav-link {
+  color: #858796;
+}
+
 .main-setting {
   border-width: 3px !important;
   margin: 7px;
