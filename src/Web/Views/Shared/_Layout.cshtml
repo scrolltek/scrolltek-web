@@ -21,28 +21,24 @@
   <!-- Page Wrapper -->
   <div id="wrapper">
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion toggled" id="accordionSidebar">
-      <!-- Sidebar - Brand -->
-      <li>
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" asp-controller="Home" asp-action="Index" style="background-color: #fff; border-right: 1px solid #efefef; color: #888">
-          <i class="fas fa-ellipsis-v fa-2x"></i>
-        </a>
-      </li>
-      <li class="main-setting nav-item border border-light rounded bg-gray-900">
-        <span class="sidebar-heading active">Vocals (On)</span>
-        <a class="nav-link active" href="#">
-          <div class="text-icon">אֱ</div>
-        </a>
-        <div class="on-off btn-group btn-group-toggle" data-toggle="buttons">
-          <label class="btn btn-secondary btn-sm active">
-            <input type="radio" name="options" id="option1" autocomplete="off" checked> On
-          </label>
-          <label class="btn btn-secondary btn-sm">
-            <input type="radio" name="options" id="option3" autocomplete="off"> Off
-          </label>
-        </div>
-      </li>
-      <!-- Just an example of which classes to toggle to turn the control off.  This should be removed.
+    <ul id="accordionSidebar" class="collapse" style="position: absolute; top: 55px; margin: 0; padding: 0; list-style: none">
+      <li id="layoutControls" class="sidebar bg-gradient-dark sidebar-dark toggled">
+        <ul class="navbar-nav accordion">
+          <li class="main-setting nav-item border border-light rounded bg-gray-900">
+            <span class="sidebar-heading active">Vocals (On)</span>
+            <a class="nav-link active" href="#">
+              <div class="text-icon">אֱ</div>
+            </a>
+            <div class="on-off btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-secondary btn-sm active">
+                <input type="radio" name="options" id="option1" autocomplete="off" checked> On
+              </label>
+              <label class="btn btn-secondary btn-sm">
+                <input type="radio" name="options" id="option3" autocomplete="off"> Off
+              </label>
+            </div>
+          </li>
+          <!-- Just an example of which classes to toggle to turn the control off.  This should be removed.
   <li class="main-setting nav-item border border-secondary rounded bg-gray-900">
     <span class="sidebar-heading">Niqqud (Off)</span>
     <a class="nav-link" href="#">
@@ -75,39 +71,39 @@
         </div>
       </li>
          -->
-      <!-- Just an example of which classes to toggle to turn the control off.  This should be removed.-->
-      <li class="main-setting lexical nav-item border border-secondary rounded bg-gray-900">
-        <span class="sidebar-heading">Lexical (Off)</span>
-        <a class="nav-link" href="#">
-          <div class="text-icon">
-            <i class="fas fa-microscope fa-w-16 fa-5x"></i>
-          </div>
-        </a>
-        <div class="on-off btn-group btn-group-toggle" data-toggle="buttons">
-          <label class="btn btn-secondary btn-sm">
-            <input type="radio" name="options" id="option1" autocomplete="off" checked> On
-          </label>
-          <label class="btn btn-secondary btn-sm active">
-            <input type="radio" name="options" id="option3" autocomplete="off"> Off
-          </label>
-        </div>
-      </li>
-  <li class="main-setting english nav-item border border-light rounded bg-gray-900">
-    <span class="sidebar-heading active">English (On)</span>
-    <a class="nav-link active" href="#">
-      <div class="text-icon">A</div>
-    </a>
-    <div class="on-off btn-group btn-group-toggle" data-toggle="buttons">
-      <label class="btn btn-secondary btn-sm active">
-        <input type="radio" name="options" id="option1" autocomplete="off" checked> On
-      </label>
-      <label class="btn btn-secondary btn-sm">
-        <input type="radio" name="options" id="option3" autocomplete="off"> Off
-      </label>
-    </div>
-  </li>
-    
-      <!-- Just an example of which classes to toggle to turn the control off.  This should be removed.
+          <!-- Just an example of which classes to toggle to turn the control off.  This should be removed.-->
+          <li class="main-setting lexical nav-item border border-secondary rounded bg-gray-900">
+            <span class="sidebar-heading">Lexical (Off)</span>
+            <a class="nav-link" href="#">
+              <div class="text-icon">
+                <i class="fas fa-microscope fa-w-16 fa-5x"></i>
+              </div>
+            </a>
+            <div class="on-off btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-secondary btn-sm">
+                <input type="radio" name="options" id="option1" autocomplete="off" checked> On
+              </label>
+              <label class="btn btn-secondary btn-sm active">
+                <input type="radio" name="options" id="option3" autocomplete="off"> Off
+              </label>
+            </div>
+          </li>
+          <li class="main-setting english nav-item border border-light rounded bg-gray-900">
+            <span class="sidebar-heading active">English (On)</span>
+            <a class="nav-link active" href="#">
+              <div class="text-icon">A</div>
+            </a>
+            <div class="on-off btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-secondary btn-sm active">
+                <input type="radio" name="options" id="option1" autocomplete="off" checked> On
+              </label>
+              <label class="btn btn-secondary btn-sm">
+                <input type="radio" name="options" id="option3" autocomplete="off"> Off
+              </label>
+            </div>
+          </li>
+
+          <!-- Just an example of which classes to toggle to turn the control off.  This should be removed.
   <li class="main-setting english nav-item border border-secondary rounded bg-gray-900">
     <span class="sidebar-heading">English (Off)</span>
     <a class="nav-link" href="#">
@@ -123,7 +119,7 @@
     </div>
   </li>
     -->
-      <!--
+          <!--
   <li class="main-setting commentary nav-item border border-light rounded bg-gray-900">
     <span class="sidebar-heading active">Commentary</span>
     <a class="nav-link active" href="#">
@@ -141,125 +137,127 @@
     </div>
   </li>
     -->
-      <!-- Just an example of which classes to toggle to turn the control off.  This should be removed.-->
-      <li class="main-setting commentary nav-item border border-secondary rounded bg-gray-900">
-        <span class="sidebar-heading">Commentary</span>
-        <a class="nav-link" href="#">
-          <div class="text-icon">
-            <i class="fas fa-comment fa-w-16 fa-5x"></i>
+          <!-- Just an example of which classes to toggle to turn the control off.  This should be removed.-->
+          <li class="main-setting commentary nav-item border border-secondary rounded bg-gray-900">
+            <span class="sidebar-heading">Commentary</span>
+            <a class="nav-link" href="#">
+              <div class="text-icon">
+                <i class="fas fa-comment fa-w-16 fa-5x"></i>
+              </div>
+            </a>
+            <div class="on-off btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-secondary btn-sm">
+                <input type="radio" name="options" id="option1" autocomplete="off" checked> On
+              </label>
+              <label class="btn btn-secondary btn-sm active">
+                <input type="radio" name="options" id="option3" autocomplete="off"> Off
+              </label>
+            </div>
+          </li>
+          <!-- Divider -->
+          <hr class="sidebar-divider d-none d-md-block" />
+          <!-- Heading -->
+          <div id="tenakh" class="sidebar-heading">
+            Tanakh
           </div>
-        </a>
-        <div class="on-off btn-group btn-group-toggle" data-toggle="buttons">
-          <label class="btn btn-secondary btn-sm">
-            <input type="radio" name="options" id="option1" autocomplete="off" checked> On
-          </label>
-          <label class="btn btn-secondary btn-sm active">
-            <input type="radio" name="options" id="option3" autocomplete="off"> Off
-          </label>
-        </div>
-      </li>
-      <!-- Divider -->
-      <hr class="sidebar-divider d-none d-md-block" />
-      <!-- Heading -->
-      <div id="tenakh" class="sidebar-heading">
-        Tanakh
-      </div>
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-          <i class="fas fa-fw fa-balance-scale"></i>
-          <span>Torah (Teaching)</span>
-        </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="#">Bereshit (In the Beginning)</a>
-            <a class="collapse-item" href="#">Shemot (The Names)</a>
-            <a class="collapse-item" href="#">Vayikra (He Called)</a>
-            <a class="collapse-item" href="#">Bemidbar (In the Desert)</a>
-            <a class="collapse-item" href="#">Devarim (Words)</a>
+          <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+              <i class="fas fa-fw fa-balance-scale"></i>
+              <span>Torah (Teaching)</span>
+            </a>
+            <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+              <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="#">Bereshit (In the Beginning)</a>
+                <a class="collapse-item" href="#">Shemot (The Names)</a>
+                <a class="collapse-item" href="#">Vayikra (He Called)</a>
+                <a class="collapse-item" href="#">Bemidbar (In the Desert)</a>
+                <a class="collapse-item" href="#">Devarim (Words)</a>
+              </div>
+            </div>
+          </li>
+          <!-- Nav Item - Charts -->
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#prophets" aria-expanded="false" aria-controls="prophets">
+              <i class="fas fa-fw fa-torah"></i>
+              <span>Nevi'im (Prophets)</span>
+            </a>
+            <div id="prophets" class="collapse" aria-labelledby="prophets" data-parent="#accordionSidebar">
+              <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Rishonim (Former):</h6>
+                <a class="collapse-item" href="#">Yĕhôshúa‘ (Joshua)</a>
+                <a class="collapse-item" href="#">Shophtim (Judges)</a>
+                <a class="collapse-item" href="#">Shmû’ēl (Samuel)</a>
+                <a class="collapse-item" href="#">M'lakhim (Kings)</a>
+                <div class="collapse-divider"></div>
+                <h6 class="collapse-header">Aharonim (Latter):</h6>
+                <a class="collapse-item" href="#">Yĕsha‘ăyāhû (Isaiah)</a>
+                <a class="collapse-item" href="#">Yirmyāhû (Jeremiah)</a>
+                <a class="collapse-item" href="#">Yĕkhezqiēl (Ezekiel)</a>
+                <h6 class="collapse-header">Trei Asar (The Twelve):</h6>
+                <a class="collapse-item" href="#">Hôshēa‘ (Hosea)</a>
+                <a class="collapse-item" href="#">Yô’ēl (Joel)</a>
+                <a class="collapse-item" href="#">‘Āmôs (Amos)</a>
+                <a class="collapse-item" href="#">‘Ōvadhyāh (Obadiah)</a>
+                <a class="collapse-item" href="#">Yônāh (Jonah)</a>
+                <a class="collapse-item" href="#">Mîkhāh (Micah)</a>
+                <a class="collapse-item" href="#">Nakḥûm (Nahum)</a>
+                <a class="collapse-item" href="#">Khăvhakûk (Habakkuk)</a>
+                <a class="collapse-item" href="#">Tsĕphanyāh (Zephaniah)</a>
+                <a class="collapse-item" href="#">Khaggai (Haggai)</a>
+                <a class="collapse-item" href="#">Zkharyāh (Zechariah)</a>
+                <a class="collapse-item" href="#">Mal’ākhî (Malachi)</a>
+              </div>
+            </div>
+          </li>
+          <!-- Nav Item - Tables -->
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="#" " data-toggle="collapse" data-target="#writings" aria-expanded="false" aria-controls="writings">
+              <i class="fas fa-fw fa-book-open"></i>
+              <span>Ketuvim (Writings)</span>
+            </a>
+            <div id="writings" class="collapse" aria-labelledby="writings" data-parent="#accordionSidebar">
+              <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Sifrei Emet (Poetry):</h6>
+                <a class="collapse-item" href="#">Tehillim (Psalms)</a>
+                <a class="collapse-item" href="#">Mishlei (Proverbs)</a>
+                <a class="collapse-item" href="#">Iyyôbh (Job)</a>
+                <div class="collapse-divider"></div>
+                <h6 class="collapse-header">Hamesh Megillot (Five Scrolls):</h6>
+                <a class="collapse-item" href="#">Shīr Hashīrīm (Song of Songs)</a>
+                <a class="collapse-item" href="#">Rūth (Ruth)</a>
+                <a class="collapse-item" href="#">Eikhah (Lamentations)</a>
+                <a class="collapse-item" href="#">Qōheleth (Ecclesiastes)</a>
+                <a class="collapse-item" href="#">Estēr (Esther)</a>
+                <h6 class="collapse-header">Other:</h6>
+                <a class="collapse-item" href="#">Dānî'ēl (Daniel)</a>
+                <a class="collapse-item" href="#">Ezrā (Ezra and Nehemiah)</a>
+                <a class="collapse-item" href="#">Divrei ha-Yamim (Chronicles)</a>
+              </div>
+            </div>
+          </li>
+          <!-- Divider -->
+          <hr class="sidebar-divider d-none d-md-block">
+          <!-- Heading -->
+          <div class="sidebar-heading">
+            Thanks
           </div>
-        </div>
-      </li>
-      <!-- Nav Item - Charts -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#prophets" aria-expanded="false" aria-controls="prophets">
-          <i class="fas fa-fw fa-torah"></i>
-          <span>Nevi'im (Prophets)</span>
-        </a>
-        <div id="prophets" class="collapse" aria-labelledby="prophets" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Rishonim (Former):</h6>
-            <a class="collapse-item" href="#">Yĕhôshúa‘ (Joshua)</a>
-            <a class="collapse-item" href="#">Shophtim (Judges)</a>
-            <a class="collapse-item" href="#">Shmû’ēl (Samuel)</a>
-            <a class="collapse-item" href="#">M'lakhim (Kings)</a>
-            <div class="collapse-divider"></div>
-            <h6 class="collapse-header">Aharonim (Latter):</h6>
-            <a class="collapse-item" href="#">Yĕsha‘ăyāhû (Isaiah)</a>
-            <a class="collapse-item" href="#">Yirmyāhû (Jeremiah)</a>
-            <a class="collapse-item" href="#">Yĕkhezqiēl (Ezekiel)</a>
-            <h6 class="collapse-header">Trei Asar (The Twelve):</h6>
-            <a class="collapse-item" href="#">Hôshēa‘ (Hosea)</a>
-            <a class="collapse-item" href="#">Yô’ēl (Joel)</a>
-            <a class="collapse-item" href="#">‘Āmôs (Amos)</a>
-            <a class="collapse-item" href="#">‘Ōvadhyāh (Obadiah)</a>
-            <a class="collapse-item" href="#">Yônāh (Jonah)</a>
-            <a class="collapse-item" href="#">Mîkhāh (Micah)</a>
-            <a class="collapse-item" href="#">Nakḥûm (Nahum)</a>
-            <a class="collapse-item" href="#">Khăvhakûk (Habakkuk)</a>
-            <a class="collapse-item" href="#">Tsĕphanyāh (Zephaniah)</a>
-            <a class="collapse-item" href="#">Khaggai (Haggai)</a>
-            <a class="collapse-item" href="#">Zkharyāh (Zechariah)</a>
-            <a class="collapse-item" href="#">Mal’ākhî (Malachi)</a>
-          </div>
-        </div>
-      </li>
-      <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" " data-toggle="collapse" data-target="#writings" aria-expanded="false" aria-controls="writings">
-          <i class="fas fa-fw fa-book-open"></i>
-          <span>Ketuvim (Writings)</span>
-        </a>
-        <div id="writings" class="collapse" aria-labelledby="writings" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Sifrei Emet (Poetry):</h6>
-            <a class="collapse-item" href="#">Tehillim (Psalms)</a>
-            <a class="collapse-item" href="#">Mishlei (Proverbs)</a>
-            <a class="collapse-item" href="#">Iyyôbh (Job)</a>
-            <div class="collapse-divider"></div>
-            <h6 class="collapse-header">Hamesh Megillot (Five Scrolls):</h6>
-            <a class="collapse-item" href="#">Shīr Hashīrīm (Song of Songs)</a>
-            <a class="collapse-item" href="#">Rūth (Ruth)</a>
-            <a class="collapse-item" href="#">Eikhah (Lamentations)</a>
-            <a class="collapse-item" href="#">Qōheleth (Ecclesiastes)</a>
-            <a class="collapse-item" href="#">Estēr (Esther)</a>
-            <h6 class="collapse-header">Other:</h6>
-            <a class="collapse-item" href="#">Dānî'ēl (Daniel)</a>
-            <a class="collapse-item" href="#">Ezrā (Ezra and Nehemiah)</a>
-            <a class="collapse-item" href="#">Divrei ha-Yamim (Chronicles)</a>
-          </div>
-        </div>
-      </li>
-      <!-- Divider -->
-      <hr class="sidebar-divider d-none d-md-block">
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Thanks
-      </div>
-      <!-- Nav Item - Pages Collapse Menu -->
-      <!-- Nav Item - Charts -->
-      <li class="nav-item">
-        <a class="nav-link" href="/Home/Attributions">
-          <i class="fas fa-fw fa-code"></i>
-          <span>Attributions</span>
-        </a>
-      </li>
-      <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="https://github.com/scrolltek/scrolltek-web/" target="_blank">
-          <i class="fas fa-fw fa-code-branch"></i>
-          <span>Contributions</span>
-        </a>
+          <!-- Nav Item - Pages Collapse Menu -->
+          <!-- Nav Item - Charts -->
+          <li class="nav-item">
+            <a class="nav-link" href="/Home/Attributions">
+              <i class="fas fa-fw fa-code"></i>
+              <span>Attributions</span>
+            </a>
+          </li>
+          <!-- Nav Item - Tables -->
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/scrolltek/scrolltek-web/" target="_blank">
+              <i class="fas fa-fw fa-code-branch"></i>
+              <span>Contributions</span>
+            </a>
+          </li>
+        </ul>
       </li>
     </ul>
     <!-- End of Sidebar -->
@@ -269,8 +267,11 @@
       <div id="content">
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+          <a asp-controller="Home" asp-action="Index" style="background-color: #fff; border-right: 1px solid #efefef; color: #888; height: 54px; width: 5.5rem">
+            <i class="fas fa-scroll fa-2x" style="margin-top: 10px; margin-left: 15px;"></i>
+          </a>
           <!-- Sidebar Toggle (Topbar) -->
-          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+          <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
             <i class="fa fa-bars"></i>
           </button>
           <!-- Topbar Search -->
@@ -339,7 +340,6 @@
   <!-- Core plugin JavaScript-->
   <script src="~/lib/jquery-easing/jquery.easing.min.js"></script>
   <!-- Custom scripts for all pages-->
-  <script src="~/lib/sb-admin-2/js/sb-admin-2.min.js"></script>
   <script src="~/app/js/site.js"></script>
   @RenderSection("Scripts", required: false)
 </body>
