@@ -1,3 +1,7 @@
+html, #wrapper {
+  height: 100%;
+}
+
 .topbar {
   height: 3.375rem !important;
 }
