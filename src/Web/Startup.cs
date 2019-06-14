@@ -94,7 +94,7 @@ namespace Web
                     template: "{controller=Home}/{action=Index}/{id?}");
                 routes.MapRoute(
                     name: "chapter",
-                    template: "Chapter/{name}/{number?}",
+                    template: "{name}/{number?}",
                     defaults: new { controller = "Tanakh", action = "Chapter" });
             });
         }
