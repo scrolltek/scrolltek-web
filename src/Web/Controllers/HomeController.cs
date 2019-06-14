@@ -13,8 +13,8 @@ namespace Web.Controllers
         public IActionResult Index()
         {
             var ctrl = new BereshitController();
-            var verse = ctrl.GetChapterFromData(1);
-            return View(verse);
+            var chapter = ctrl.GetChapterFromData(1);
+            return View(chapter);
         }
 
         public IActionResult Attributions()
@@ -25,6 +25,13 @@ namespace Web.Controllers
         public IActionResult Privacy()
         {
             return View();
+        }
+
+        public IActionResult App()
+        {
+            var ctrl = new BereshitController();
+            var chapter = ctrl.GetChapterFromData(1);
+            return View(chapter);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -1,9 +1,30 @@
+@using Scrolltek.Web.Models
+@model Chapter
 @{
-    ViewData["Title"] = "Home Page";
-    Layout = "_Template";
+  ViewData["Title"] = "Chapter";
+  Layout = "_Sidebar";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="align-self-center">
+  <ul style="font-size: 1.75rem; list-style-type: none; margin: 0; padding: 0">
+    @foreach (var verse in Model.Verses)
+    {
+      <li style="direction: rtl; margin-bottom: 30px" class="container text-right">
+        <div class="row no-gutters">
+          <div class="col-1" style="font-size: 1.0rem; margin-top: 11px">@verse.HebrewOrdinal</div>
+          <div class="col-10 font-weight-bold">
+            @verse.Text
+          </div>
+          <div class="col-1">&nbsp;</div>
+        </div>
+      </li>
+      <li class="container text-left">
+        <div class="row">
+          <div class="col-1" style="font-size: 0.75rem; margin-top: 11px">@verse.OrderNumber.)</div>
+          <div class="col-10" style="font-size: 1.5rem;">@verse.Koren</div>
+          <div class="col-1">&nbsp;</div>
+        </div>
+      </li>
+    }
+  </ul>
 </div>

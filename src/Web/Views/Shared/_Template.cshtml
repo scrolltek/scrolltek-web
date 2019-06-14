@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Scrolltek - @ViewData["Title"]</title>
+  <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    #main {
+      display: flex;
+      min-height: calc(100vh - 60px);
+    }
+
+      #main > article, #main > aside {
+        margin-top: 60px;
+      }
+
+      #main > article {
+        flex: 1;
+      }
+
+      #main > aside {
+        flex: 0 0 250px;
+        background: beige;
+      }
+
+    article, aside {
+      padding: 1em;
+    }
+
+    header {
+      position: fixed;
+      background: #fff;
+      height: 60px;
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+      z-index: 1000;
+    }
+
+    .bottom-shadow {
+      -webkit-box-shadow: 0 2px 5px rgba(57, 63, 72, 0.3);
+      -moz-box-shadow: 0 2px 5px rgba(57, 63, 72, 0.3);
+      box-shadow: 0 2px 5px rgba(57, 63, 72, 0.3);
+    }
+
+    header .navbar {
+      width: 100vw;
+    }
+  </style>
+  @RenderSection("Styles", required: false)
+</head>
+<body>
+  <header class="bottom-shadow">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" asp-controller="Home" asp-action="Index">ט</a>
+        <button id="settings" class="btn btn-link mr-3">
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+  <div id="main" class="bg-light">
+    <article>
+      @RenderBody()
+    </article>
+    <aside >Aside</aside>
+  </div>
+  <script src="~/lib/jquery/jquery.min.js"></script>
+  <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="~/lib/jquery-easing/jquery.easing.min.js"></script>
+  <script type="text/javascript">
+    (function ($) {
+      "use strict"; // Start of use strict
+
+      // Toggle the side navigation
+      $('#settings').on('click', function () {
+        $('#main > aside').toggleClass('d-none');
+      });
+
+    })(jQuery); // End of use strict
+  </script>
+  @RenderSection("Scripts", required: false);
+</body>
+</html>
