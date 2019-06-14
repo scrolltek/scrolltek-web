@@ -3,9 +3,9 @@
 }
 
   .topbar .navbar-search input {
-    font-size: 1.12rem;
+    font-size: 1.35rem;
     font-weight: bold;
-    padding: 0 3px 0 3px;
+    padding: 3px;
     margin: 0;
     height: 2.3rem;
   }
