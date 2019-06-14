@@ -2,6 +2,14 @@
   height: 3.375rem !important;
 }
 
+  .topbar .navbar-search input {
+    font-size: 1.12rem;
+    font-weight: bold;
+    padding: 0 3px 0 3px;
+    margin: 0;
+    height: 2.3rem;
+  }
+
 .sidebar .sidebar-brand {
   height: 3.375rem !important;
 }
@@ -38,9 +46,11 @@
 .lexical .text-icon, .commentary .text-icon {
   height: 100px;
 }
+
 .lexical i, .commentary i {
   font-size: 2.85rem !important;
 }
+
   .lexical i.active, .commentary i.active {
     color: #efefef !important;
   }
@@ -57,7 +67,7 @@
 }
 
 #content .navbar {
-  padding: 0 0 0 .91rem;
+  padding: 0;
 }
 
 .card-header img {
