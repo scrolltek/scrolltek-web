@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Xml;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using Scrolltek.Web.Models;
 
 namespace Web.Controllers
@@ -19,6 +20,7 @@ namespace Web.Controllers
     {
 
         private XmlDocument _bookXml;
+        private KorenBook _korenTranslation;
 
         /// <summary>
         /// Gets the absolute path to the data directory used to store the
@@ -69,10 +71,46 @@ namespace Web.Controllers
         }
 
         /// <summary>
-        /// Gets the name of the book of in the Miqra which this controller
+        /// Gets the absolute path to the specific data file which contains
+        /// "The Koren Jerusalem Bible" English translation of the Hebrew text
+        /// (license CC-BY-NC).
+        /// </summary>
+        public string KorenPath
+        {
+            get
+            {
+                return Path.Combine(BooksPath, "Koren", $"{BookName}.json");
+            }
+        }
+
+        /// <summary>
+        /// Gets a representation of the current book as translated by "The
+        /// Koren Jerusalem Bible" (license CC-BY-NC).
+        /// </summary>
+        public KorenBook KorenTranslation
+        {
+            get
+            {
+                if (_korenTranslation == null)
+                {
+                    var text = System.IO.File.ReadAllText(KorenPath);
+                    _korenTranslation = JsonConvert.DeserializeObject<KorenBook>(text);
+                }
+                return _korenTranslation;
+            }
+        }
+
+        /// <summary>
+        /// Gets the name of the book of in the Tanakh which this controller
         /// investigates.
         /// </summary>
         public abstract string BookName { get; }
+
+        /// <summary>
+        /// Gets the number of the book in the Tanakh which this controller
+        /// investigates.
+        /// </summary>
+        public abstract int BookNumber { get; }
 
         /// <summary>
         /// Gets the Xml of the primary book which this controller queries.
@@ -96,6 +134,7 @@ namespace Web.Controllers
         public Book GetBook()
         {
             var book = new Book();
+            book.OrderNumber = BookNumber;
             book.Chapters = new List<Chapter>();
             var xpath = $"//chapter";
             var nodes = BookXml.SelectNodes(xpath);
@@ -103,7 +142,7 @@ namespace Web.Controllers
             {
                 for (int i = 1; i <= nodes.Count; i++)
                 {
-                    var chapter = GetChapterFromXml(i);
+                    var chapter = GetChapterFromData(i);
                     book.Chapters.Add(chapter);
                 }
             }
@@ -114,7 +153,7 @@ namespace Web.Controllers
         public IActionResult GetChapter(int chapterNumber)
         {
             IActionResult result = NotFound();
-            var chapter = GetChapterFromXml(chapterNumber);
+            var chapter = GetChapterFromData(chapterNumber);
             if (chapter != null)
             {
                 result = Ok(chapter);
@@ -126,7 +165,7 @@ namespace Web.Controllers
         public IActionResult GetVerse(int chapterNumber, int verseNumber)
         {
             IActionResult result = NotFound();
-            var verse = GetVerseFromXml(chapterNumber, verseNumber);
+            var verse = GetVerseFromData(chapterNumber, verseNumber);
             if (verse != null)
             {
                 result = Ok(verse);
@@ -134,7 +173,7 @@ namespace Web.Controllers
             return result;
         }
 
-        internal Chapter GetChapterFromXml(int chapterNumber)
+        internal Chapter GetChapterFromData(int chapterNumber)
         {
             Chapter chapter = null;
             var xpath = $"//chapter[@osisID='{BookName}.{chapterNumber}']";
@@ -146,14 +185,14 @@ namespace Web.Controllers
                 chapter.Verses = new List<Verse>();
                 for (int i = 1; i <= node.ChildNodes.Count; i++)
                 {
-                    var verse = GetVerseFromXml(chapterNumber, i);
+                    var verse = GetVerseFromData(chapterNumber, i);
                     chapter.Verses.Add(verse);
                 }
             }
             return chapter;
         }
 
-        internal Verse GetVerseFromXml(int chapterNumber, int verseNumber)
+        internal Verse GetVerseFromData(int chapterNumber, int verseNumber)
         {
             Verse verse = null;
             var xpath = $"//verse[@osisID='{BookName}.{chapterNumber}.{verseNumber}']";
@@ -163,6 +202,7 @@ namespace Web.Controllers
                 verse = new Verse();
                 verse.OrderNumber = verseNumber;
                 verse.Words = GetWordsFromVerseNode(node);
+                verse.Koren = GetKorenTranslation(chapterNumber, verseNumber);
             }
             return verse;
         }
@@ -198,6 +238,11 @@ namespace Web.Controllers
                 
             }
             return words;
+        }
+
+        internal string GetKorenTranslation(int chapterNumber, int verseNumber)
+        {
+            return KorenTranslation.Text[chapterNumber - 1][verseNumber - 1];
         }
 
     }

@@ -13,6 +13,8 @@ namespace Web.Controllers
     {
         
         public override string BookName => "Gen";
-        
+
+        public override int BookNumber => 1;
+
     }
 }

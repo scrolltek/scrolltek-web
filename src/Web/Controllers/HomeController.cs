@@ -12,9 +12,7 @@ namespace Web.Controllers
     {
         public IActionResult Index()
         {
-            var ctrl = new IsaiahController();
-            var verse = ctrl.GetVerseFromXml(43, 11);
-            return View(verse);
+            return View();
         }
 
         public IActionResult Attributions()
@@ -32,5 +30,6 @@ namespace Web.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
     }
 }
