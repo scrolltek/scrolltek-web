@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Tanakh - @ViewData["Title"]</title>
+  <title data-hebrew-title="@ViewData["HebrewTitle"]" data-english-title="@ViewData["EnglishTitle"]">@ViewData["EnglishTitle"] &bull; @ViewData["HebrewTitle"]</title>
   <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
   <!-- Bootstrap CSS CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -180,14 +180,21 @@
 
       // English settings toggle
       $('.hebrew-only').on('click', function () {
+        var $title = $('title'),
+          hebrewTitle = $title.data('hebrewTitle');
         $('.navbar-brand .hebrew').removeClass('d-none');
         $('.english').addClass('d-none');
         $('.card-deck').addClass('right-to-left');
+        $title.text(hebrewTitle);
       });
       $('.hebrew-and-english').on('click', function () {
+        var $title = $('title'),
+          hebrewTitle = $title.data('hebrewTitle'),
+          englishTitle = $title.data('englishTitle');
         $('.navbar-brand .hebrew').addClass('d-none');
         $('.english').removeClass('d-none');
         $('.card-deck').removeClass('right-to-left');
+        $title.text(englishTitle + ' \u2022 ' + hebrewTitle);
       });
 
       // Init tooltips
