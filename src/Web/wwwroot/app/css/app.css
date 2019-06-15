@@ -36,10 +36,6 @@ a:focus {
   border: none;
 }
 
-.navbar-brand {
-  width: 75px;
-}
-
 .line {
   width: 100%;
   height: 1px;
@@ -168,7 +164,7 @@ a.article:hover {
 }
 
 #pageView {
-  margin-top: 60px;
+  margin-top: 80px;
   color: #535353;
 }
 
