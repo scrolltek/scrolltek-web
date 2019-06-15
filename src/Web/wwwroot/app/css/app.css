@@ -153,6 +153,16 @@ a.article:hover {
   margin-bottom: 10px;
 }
 
+.bd-callout {
+  border: 1px solid #eee;
+  border-left-width: .25rem;
+  border-radius: .25rem;
+}
+
+.bd-callout-warning {
+  border-left-color: #f0ad4e;
+}
+
 #content {
   width: 100%;
   padding: 20px;
@@ -170,7 +180,12 @@ a.article:hover {
 
 #page-view .jumbotron {
   position: relative;
+  background-color: #efefef;
 }
+
+  #page-view .jumbotron .card-body {
+    direction: ltr;
+  }
 
   #page-view i.english-icon, #page-view i.hebrew-icon {
     position: absolute;
