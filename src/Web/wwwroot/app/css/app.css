@@ -163,10 +163,27 @@ a.article:hover {
   right: 0;
 }
 
-#pageView {
+#page-view {
   margin-top: 80px;
   color: #535353;
 }
+
+#page-view .jumbotron {
+  position: relative;
+}
+
+  #page-view i.english-icon, #page-view i.hebrew-icon {
+    position: absolute;
+    top: 10px;
+  }
+
+  #page-view i.hebrew-icon {
+    right: 10px;
+  }
+
+  #page-view i.english-icon {
+    left: 10px;
+  }
 
 .scroll-to-top {
   position: fixed;

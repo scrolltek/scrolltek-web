@@ -124,7 +124,7 @@
           </button>
         </div>
       </nav>
-      <div id="pageView">
+      <div id="page-view">
         @RenderBody()
         <a class="scroll-to-top rounded" href="#page-top">
           <i class="fas fa-angle-up"></i>
@@ -182,8 +182,8 @@
       $('.hebrew-only').on('click', function () {
         var $title = $('title'),
           hebrewTitle = $title.data('hebrewTitle');
-        $('.navbar-brand .hebrew').removeClass('d-none');
-        $('.english').addClass('d-none');
+        $('.navbar-brand .hebrew, .hebrew-icon').removeClass('d-none');
+        $('.english, .english-icon').addClass('d-none');
         $('.card-deck').addClass('right-to-left');
         $title.text(hebrewTitle);
       });
@@ -191,8 +191,8 @@
         var $title = $('title'),
           hebrewTitle = $title.data('hebrewTitle'),
           englishTitle = $title.data('englishTitle');
-        $('.navbar-brand .hebrew').addClass('d-none');
-        $('.english').removeClass('d-none');
+        $('.navbar-brand .hebrew, .hebrew-icon').addClass('d-none');
+        $('.english, .english-icon').removeClass('d-none');
         $('.card-deck').removeClass('right-to-left');
         $title.text(englishTitle + ' \u2022 ' + hebrewTitle);
       });

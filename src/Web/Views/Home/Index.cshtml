@@ -4,148 +4,159 @@
     ViewData["EnglishTitle"] = "Tanakh";
 }
 
-<h2 class="text-center">
-  <span class="english">Torah &bull;</span>
-  <span class="hebrew">&#1514;&#1493;&#1512;&#1492;</span>&nbsp;&bull;
-  <i class="fas fa-fw fa-balance-scale"></i>
-</h2>
-<div class="card-deck">
-  <a class="card" asp-controller="Tanakh" asp-action="Chapter" asp-route-name="bereshit" asp-route-number="1">
-    <div class="card-body">
-      <h5 class="card-title text-center">
-        <span class="english">Genesis&nbsp;&bull;</span>
-        <span class="hebrew">&#1512;&#1461;&#1488;&#1513;&#1473;&#1460;&#1497;&#1514;&nbsp;</span>
-      </h5>
-      <p class="card-text">
-        Bereishit (b-ray-sheeth') - <strong class="text-uppercase">In the Beginning</strong>
-      </p>
-    </div>
-  </a>
-  <a class="card" asp-controller="Tanakh" asp-action="Chapter" asp-route-name="shemot" asp-route-number="1">
-    <div class="card-body">
-      <h5 class="card-title text-center">
-        <span class="english">Exodous&nbsp;&bull;</span>
-        <span class="hebrew">&#1513;&#1502;&#1493;&#1514;</span>
-      </h5>
-      <p class="card-text">
-        Shemot (shem-oht) - <strong class="text-uppercase">The Names</strong>
-      </p>
-    </div>
-  </a>
-  <a class="card" asp-controller="Tanakh" asp-action="Chapter" asp-route-name="vayikra" asp-route-number="1">
-    <div class="card-body">
-      <h5 class="card-title text-center">
-        <span class="english">Leviticus&nbsp;&bull;</span>
-        <span class="hebrew">&#1493;&#1497;&#1511;&#1512;&#1488;</span>
-      </h5>
-      <p class="card-text">
-        Vayikra (Va-yee-krah) - <strong class="text-uppercase">And He Called</strong>
-      </p>
-    </div>
-  </a>
+<div class="jumbotron">
+  <i class="fas fa-fw fa-balance-scale english-icon"></i>
+  <i class="fas fa-fw fa-balance-scale hebrew-icon d-none"></i>
+  <h1 class="display-5 text-center">
+    <span class="english">Torah &bull;</span>
+    <span class="hebrew">&#1514;&#1493;&#1512;&#1492;</span>
+  </h1>
+  <div class="card-deck">
+    <a class="card shadow-sm" asp-controller="Tanakh" asp-action="Chapter" asp-route-name="bereshit" asp-route-number="1">
+      <div class="card-body">
+        <h5 class="card-title text-center">
+          <span class="english">Genesis&nbsp;&bull;</span>
+          <span class="hebrew">&#1512;&#1461;&#1488;&#1513;&#1473;&#1460;&#1497;&#1514;&nbsp;</span>
+        </h5>
+        <p class="card-text">
+          Bereishit (b-ray-sheeth') - <strong class="text-uppercase">In the Beginning</strong>
+        </p>
+      </div>
+    </a>
+    <a class="card shadow-sm" asp-controller="Tanakh" asp-action="Chapter" asp-route-name="shemot" asp-route-number="1">
+      <div class="card-body">
+        <h5 class="card-title text-center">
+          <span class="english">Exodous&nbsp;&bull;</span>
+          <span class="hebrew">&#1513;&#1502;&#1493;&#1514;</span>
+        </h5>
+        <p class="card-text">
+          Shemot (shem-oht) - <strong class="text-uppercase">The Names</strong>
+        </p>
+      </div>
+    </a>
+    <a class="card shadow-sm" asp-controller="Tanakh" asp-action="Chapter" asp-route-name="vayikra" asp-route-number="1">
+      <div class="card-body">
+        <h5 class="card-title text-center">
+          <span class="english">Leviticus&nbsp;&bull;</span>
+          <span class="hebrew">&#1493;&#1497;&#1511;&#1512;&#1488;</span>
+        </h5>
+        <p class="card-text">
+          Vayikra (Va-yee-krah) - <strong class="text-uppercase">And He Called</strong>
+        </p>
+      </div>
+    </a>
+  </div>
+  <div class="card-deck">
+    <a class="card shadow-sm" asp-controller="Tanakh" asp-action="Chapter" asp-route-name="behmidar" asp-route-number="1">
+      <div class="card-body">
+        <h5 class="card-title text-center">
+          <span class="english">Numbers&nbsp;&bull;</span>
+          <span class="hebrew">&#1489;&#1502;&#1491;&#1489;&#1512;</span>
+        </h5>
+        <p class="card-text">
+          Bemidbar (beh-mid-bar) - <strong class="text-uppercase">In the Desert</strong>
+        </p>
+      </div>
+    </a>
+    <a class="card shadow-sm" asp-controller="Tanakh" asp-action="Chapter" asp-route-name="bereshit" asp-route-number="1">
+      <div class="card-body">
+        <h5 class="card-title text-center">
+          <span class="english">Deuteronomy&nbsp;&bull;</span>
+          <span class="hebrew">&#1491;&#1489;&#1512;&#1497;&#1501;</span>
+        </h5>
+        <p class="card-text">
+          Devarim (dev-ar-eem) - <strong class="text-uppercase">Words</strong>
+        </p>
+      </div>
+    </a>
+    <div class="card" style="visibility: hidden"></div>
+  </div>
 </div>
-<div class="card-deck">
-  <a class="card" asp-controller="Tanakh" asp-action="Chapter" asp-route-name="behmidar" asp-route-number="1">
-    <div class="card-body">
-      <h5 class="card-title text-center">
-        <span class="english">Numbers&nbsp;&bull;</span>
-        <span class="hebrew">&#1489;&#1502;&#1491;&#1489;&#1512;</span>
-      </h5>
-      <p class="card-text">
-        Bemidbar (beh-mid-bar) - <strong class="text-uppercase">In the Desert</strong>
-      </p>
-    </div>
-  </a>
-  <a class="card" asp-controller="Tanakh" asp-action="Chapter" asp-route-name="bereshit" asp-route-number="1">
-    <div class="card-body">
-      <h5 class="card-title text-center">
-        <span class="english">Deuteronomy&nbsp;&bull;</span>
-        <span class="hebrew">&#1491;&#1489;&#1512;&#1497;&#1501;</span>
-      </h5>
-      <p class="card-text">
-        Devarim (dev-ar-eem) - <strong class="text-uppercase">Words</strong>
-      </p>
-    </div>
-  </a>
-  <div class="card" style="visibility: hidden"></div>
+
+<div class="jumbotron">
+  <i class="fas fa-fw fa-user-friends english-icon"></i>
+  <i class="fas fa-fw fa-user-friends hebrew-icon d-none"></i>
+  <h2 class="text-center">
+    <span class="english">Prophets &bull;</span>
+    <span class="hebrew">&#1504;&#1489;&#1497;&#1488;&#1497;&#1501;</span>
+  </h2>
+  <div class="card-deck">
+    <a class="card shadow-sm" asp-controller="Tanakh" asp-action="Chapter" asp-route-name="bereshit" asp-route-number="1">
+      <div class="card-body">
+        <h5 class="card-title text-center">
+          <span class="english">Genesis&nbsp;&bull;</span>
+          <span class="hebrew">&#1512;&#1461;&#1488;&#1513;&#1473;&#1460;&#1497;&#1514;&nbsp;</span>
+        </h5>
+        <p class="card-text">
+          Bereishit (b-ray-sheeth') - <strong class="text-uppercase">In the Beginning</strong>
+        </p>
+      </div>
+    </a>
+    <a class="card shadow-sm" asp-controller="Tanakh" asp-action="Chapter" asp-route-name="shemot" asp-route-number="1">
+      <div class="card-body">
+        <h5 class="card-title text-center">
+          <span class="english">Exodous&nbsp;&bull;</span>
+          <span class="hebrew">&#1513;&#1502;&#1493;&#1514;</span>
+        </h5>
+        <p class="card-text">
+          Shemot (shem-oht) - <strong class="text-uppercase">The Names</strong>
+        </p>
+      </div>
+    </a>
+    <a class="card shadow-sm" asp-controller="Tanakh" asp-action="Chapter" asp-route-name="vayikra" asp-route-number="1">
+      <div class="card-body">
+        <h5 class="card-title text-center">
+          <span class="english">Leviticus&nbsp;&bull;</span>
+          <span class="hebrew">&#1493;&#1497;&#1511;&#1512;&#1488;</span>
+        </h5>
+        <p class="card-text">
+          Vayikra (Va-yee-krah) - <strong class="text-uppercase">And He Called</strong>
+        </p>
+      </div>
+    </a>
+  </div>
 </div>
-<h2 class="text-center">
-  <span class="english">Prophets &bull;</span>
-  <span class="hebrew">&#1504;&#1489;&#1497;&#1488;&#1497;&#1501;</span>&nbsp;&bull;
-  <i class="fas fa-fw fa-user-friends"></i>
-</h2>
-<div class="card-deck">
-  <a class="card" asp-controller="Tanakh" asp-action="Chapter" asp-route-name="bereshit" asp-route-number="1">
-    <div class="card-body">
-      <h5 class="card-title text-center">
-        <span class="english">Genesis&nbsp;&bull;</span>
-        <span class="hebrew">&#1512;&#1461;&#1488;&#1513;&#1473;&#1460;&#1497;&#1514;&nbsp;</span>
-      </h5>
-      <p class="card-text">
-        Bereishit (b-ray-sheeth') - <strong class="text-uppercase">In the Beginning</strong>
-      </p>
-    </div>
-  </a>
-  <a class="card" asp-controller="Tanakh" asp-action="Chapter" asp-route-name="shemot" asp-route-number="1">
-    <div class="card-body">
-      <h5 class="card-title text-center">
-        <span class="english">Exodous&nbsp;&bull;</span>
-        <span class="hebrew">&#1513;&#1502;&#1493;&#1514;</span>
-      </h5>
-      <p class="card-text">
-        Shemot (shem-oht) - <strong class="text-uppercase">The Names</strong>
-      </p>
-    </div>
-  </a>
-  <a class="card" asp-controller="Tanakh" asp-action="Chapter" asp-route-name="vayikra" asp-route-number="1">
-    <div class="card-body">
-      <h5 class="card-title text-center">
-        <span class="english">Leviticus&nbsp;&bull;</span>
-        <span class="hebrew">&#1493;&#1497;&#1511;&#1512;&#1488;</span>
-      </h5>
-      <p class="card-text">
-        Vayikra (Va-yee-krah) - <strong class="text-uppercase">And He Called</strong>
-      </p>
-    </div>
-  </a>
-</div>
-<h2 class="text-center">
-  <span class="english">Writings &bull;</span>
-  <span class="hebrew">&#1514;&#1512;&#1490;&#1493;&#1502;&#1497;&#1501;</span>&nbsp;&bull;
-  <i class="fas fa-fw fa-feather-alt"></i>
-</h2>
-<div class="card-deck">
-  <a class="card" asp-controller="Tanakh" asp-action="Chapter" asp-route-name="bereshit" asp-route-number="1">
-    <div class="card-body">
-      <h5 class="card-title text-center">
-        <span class="english">Genesis&nbsp;&bull;</span>
-        <span class="hebrew">&#1512;&#1461;&#1488;&#1513;&#1473;&#1460;&#1497;&#1514;&nbsp;</span>
-      </h5>
-      <p class="card-text">
-        Bereishit (b-ray-sheeth') - <strong class="text-uppercase">In the Beginning</strong>
-      </p>
-    </div>
-  </a>
-  <a class="card" asp-controller="Tanakh" asp-action="Chapter" asp-route-name="shemot" asp-route-number="1">
-    <div class="card-body">
-      <h5 class="card-title text-center">
-        <span class="english">Exodous&nbsp;&bull;</span>
-        <span class="hebrew">&#1513;&#1502;&#1493;&#1514;</span>
-      </h5>
-      <p class="card-text">
-        Shemot (shem-oht) - <strong class="text-uppercase">The Names</strong>
-      </p>
-    </div>
-  </a>
-  <a class="card" asp-controller="Tanakh" asp-action="Chapter" asp-route-name="vayikra" asp-route-number="1">
-    <div class="card-body">
-      <h5 class="card-title text-center">
-        <span class="english">Leviticus&nbsp;&bull;</span>
-        <span class="hebrew">&#1493;&#1497;&#1511;&#1512;&#1488;</span>
-      </h5>
-      <p class="card-text">
-        Vayikra (Va-yee-krah) - <strong class="text-uppercase">And He Called</strong>
-      </p>
-    </div>
-  </a>
+
+<div class="jumbotron">
+  <i class="fas fa-fw fa-feather-alt english-icon"></i>
+  <i class="fas fa-fw fa-feather-alt hebrew-icon d-none"></i>
+  <h2 class="text-center">
+    <span class="english">Writings &bull;</span>
+    <span class="hebrew">&#1514;&#1512;&#1490;&#1493;&#1502;&#1497;&#1501;</span>
+  </h2>
+  <div class="card-deck">
+    <a class="card shadow-sm" asp-controller="Tanakh" asp-action="Chapter" asp-route-name="bereshit" asp-route-number="1">
+      <div class="card-body">
+        <h5 class="card-title text-center">
+          <span class="english">Genesis&nbsp;&bull;</span>
+          <span class="hebrew">&#1512;&#1461;&#1488;&#1513;&#1473;&#1460;&#1497;&#1514;&nbsp;</span>
+        </h5>
+        <p class="card-text">
+          Bereishit (b-ray-sheeth') - <strong class="text-uppercase">In the Beginning</strong>
+        </p>
+      </div>
+    </a>
+    <a class="card shadow-sm" asp-controller="Tanakh" asp-action="Chapter" asp-route-name="shemot" asp-route-number="1">
+      <div class="card-body">
+        <h5 class="card-title text-center">
+          <span class="english">Exodous&nbsp;&bull;</span>
+          <span class="hebrew">&#1513;&#1502;&#1493;&#1514;</span>
+        </h5>
+        <p class="card-text">
+          Shemot (shem-oht) - <strong class="text-uppercase">The Names</strong>
+        </p>
+      </div>
+    </a>
+    <a class="card shadow-sm" asp-controller="Tanakh" asp-action="Chapter" asp-route-name="vayikra" asp-route-number="1">
+      <div class="card-body">
+        <h5 class="card-title text-center">
+          <span class="english">Leviticus&nbsp;&bull;</span>
+          <span class="hebrew">&#1493;&#1497;&#1511;&#1512;&#1488;</span>
+        </h5>
+        <p class="card-text">
+          Vayikra (Va-yee-krah) - <strong class="text-uppercase">And He Called</strong>
+        </p>
+      </div>
+    </a>
+  </div>
 </div>
