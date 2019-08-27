@@ -159,8 +159,16 @@ a.article:hover {
   border-radius: .25rem;
 }
 
-.bd-callout-warning {
+.bd-callout-torah {
+  border-left-color: #17a2b8;
+}
+
+.bd-callout-prophets {
   border-left-color: #f0ad4e;
+}
+
+.bd-callout-writings {
+  border-left-color: #28a745;
 }
 
 #content {
