@@ -185,6 +185,8 @@
         $('.navbar-brand .hebrew, .hebrew-icon').removeClass('d-none');
         $('.english, .english-icon').addClass('d-none');
         $('.card-deck').addClass('right-to-left');
+        $('.jumbotron h5').removeClass('text-left');
+        $('.jumbotron h5').addClass('text-right');
         $title.text(hebrewTitle);
       });
       $('.hebrew-and-english').on('click', function () {
@@ -194,6 +196,8 @@
         $('.navbar-brand .hebrew, .hebrew-icon').addClass('d-none');
         $('.english, .english-icon').removeClass('d-none');
         $('.card-deck').removeClass('right-to-left');
+        $('.jumbotron h5').removeClass('text-right');
+        $('.jumbotron h5').addClass('text-left');
         $title.text(englishTitle + ' \u2022 ' + hebrewTitle);
       });
 
